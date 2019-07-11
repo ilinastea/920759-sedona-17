@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анастасия Ильина](https://up.htmlacademy.ru/adaptive/17/user/920759).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Балабанович].
 
 ---
 
