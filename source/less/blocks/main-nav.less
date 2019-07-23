@@ -1,7 +1,6 @@
 .main-nav {
   margin: 0;
   padding: 0;
-  outline: 1px dashed blue;
 }
 
 .main-nav__list {
@@ -15,4 +14,21 @@
   padding: 0;
   border: 0;
   outline: none;
+}
+
+@media (min-width: 320px) {
+  .main-nav__toggle {
+  }
+}
+
+@media (min-width: 768px) {
+  .main-nav__toggle {
+    display: none;
+  }
+}
+
+@media (min-width: 1200px) {
+  .main-nav__toggle {
+    display: none;
+  }
 }

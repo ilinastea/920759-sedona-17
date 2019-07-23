@@ -1,18 +1,53 @@
-.videostream {
-  margin: 0;
-  padding: 0;
-  width: @width-mobile;
-  outline: 1px solid black;
+//мобильная версия
+@media (min-width: 320px) {
+  .videostream {
+    width: @width-mobile;
+    margin: 0 auto;
+  }
+  .videostream__head {
+    margin: 32px 0 36px;
+    padding: 0;
+    text-align: center;
+    .font-header(18px);
+  }
+  .videostream__text {
+    width: 280px;
+    margin: 0 auto 50px;
+    padding: 0;
+    text-align: center;
+    .font-content(24px);
+  }
 }
 
-.videostream__head {
-  margin: 0;
-  padding: 0;
-  .font-header;
+//вресия для планшета
+@media (min-width: 768px) {
+  .videostream {
+    width: @width-tablet;
+    margin: 0 auto;
+  }
+  .videostream__head {
+    margin: 72px 0 36px;
+    .font-header(30px);
+  }
+  .videostream__text {
+    width: 450px;
+    margin: 0 auto 64px;
+  }
 }
 
-.videostream__text {
-  margin: 0;
-  padding: 0;
-  .font-content(24px);
+//версия декстоп
+@media (min-width: 1200px) {
+  .videostream {
+    width: @width-desktop;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+  .videostream__head {
+    margin: 102px 0 36px;
+    .font-header(30px);
+  }
+  .videostream__text {
+    width: 450px;
+    margin: 0 auto 72px;
+  }
 }

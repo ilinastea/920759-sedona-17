@@ -1,14 +1,32 @@
 .get-feedback {
-  margin: 0;
-  padding: 0;
-  width: @width-mobile;
-  outline: 1px solid black;
+}
+
+@media (min-width: 320px) {
+  .get-feedback {
+    width: @width-mobile;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .get-feedback {
+    width: @width-tablet;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .get-feedback {
+    width: @width-desktop;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 }
 
 .get-feedback__head {
   margin: 0;
   padding: 0;
-  .font-header;
+  // .font-header-mobile;
 }
 
 .get-feedback__text {

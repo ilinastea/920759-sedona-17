@@ -1,24 +1,45 @@
-.footer {
-  width: @width-mobile;
-  outline: 1px solid blue;
+//мобильная версия
+@media (min-width: 320px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: @width-mobile;
+    margin: 0 auto;
+  }
+  .footer__hashtag-visitsedona {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    .font-header(21px);
+  }
+  .footer__social {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  .footer__about-developer {
+    display: flex;
+  }
+  .footer__developed-by {
+    margin: 0;
+    padding: 0;
+    .font-content(26px);
+  }
 }
 
-.footer__hashtag-visitsedona {
-  margin: 0;
-  padding: 0;
-  font-size: 21px;
-  font-weight: 700;
-  line-height: 26px;
+//вресия для планшета
+@media (min-width: 768px) {
+  .footer {
+    flex-direction: row;
+    width: @width-tablet;
+  }
 }
 
-.footer__social {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.footer__developed-by {
-  margin: 0;
-  padding: 0;
-  .font-content(26px);
+//вресия десктоп
+@media (min-width: 1200px) {
+  .footer {
+    width: @width-desktop;
+    padding: 0 40px;
+  }
 }

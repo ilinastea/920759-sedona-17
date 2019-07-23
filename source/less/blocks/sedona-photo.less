@@ -1,20 +1,40 @@
-.sedona-photo__title {
-  margin: 0;
-  padding: 0;
-  .font-content(24px);
+//мобильная версия
+@media (min-width: 320px) {
+  .sedona-photo__title {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+  .sedona-photo__author {
+    margin: 0;
+    padding: 0;
+    .font-content(24px);
+    text-transform: none;
+  }
+  .sedona-photo__like-number {
+    margin: 0;
+    padding: 0;
+    .font-content(24px);
+  }
 }
 
-.sedona-photo__author {
-  margin: 0;
-  padding: 0;
-  .font-content(24px);
-  text-transform: none;
+//вресия для планшета
+@media (min-width: 768px) {
+  .sedona-photo {
+    display: flex;
+    flex-direction: column;
+  }
+  .sedona-photo__wrapper {
+    display: flex;
+  }
 }
 
-.sedona-photo__like-number {
-  margin: 0;
-  padding: 0;
-  .font-content(24px);
+//версия декстоп
+@media (min-width: 1200px) {
+  .sedona-photo {
+  }
 }
 
 .sedona-photo__like-button {
