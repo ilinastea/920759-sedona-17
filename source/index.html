@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -10,8 +11,8 @@
       <nav class="main-nav">
         <ul class="main-nav__list menu">
           <li class="menu__item">Главная</li>
-          <li class="menu__item"><a class="menu__link" href="sedona-photo.html">Фото и видео</a></li>
-          <li class="menu__item"><a class="menu__link" href="sedona-form.html">Форма отзыва</a></li>
+          <li class="menu__item"><a class="menu__link" href="photo.html">Фото и видео</a></li>
+          <li class="menu__item"><a class="menu__link" href="form.html">Форма отзыва</a></li>
           <li class="menu__item"><a class="menu__link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
         </ul>
         <button class="main-nav__toggle main-nav__toggle_opened" type="button">Открыть меню</button>
@@ -22,7 +23,7 @@
       <section class="welcome">
         <h1 class="hidden">Седона</h1>
         <a class="welcome__background"><img src="http://placehold.it/320x389" width="320" height="389" alt=""></a>
-        <a class="welcome__sedona-index"><img src="http://placehold.it/282x214" width="282" height="214" alt=""></a>
+        <!-- <a class="welcome__sedona-index"><img src="http://placehold.it/282x214" width="282" height="214" alt=""></a> -->
         <h2 class="welcome__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h2>
         <p class="welcome__intro">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
       </section>
@@ -60,18 +61,18 @@
           </div>
           <a class="choice-reasons__photo"><img src="http://placehold.it/320x260" width="320" height="260" alt=""></a>
         </div>
-        <div class="choice-reasons__wrapper">
-          <div class="choice-reasons__content choice-reasons__content_grey-theme">
+        <div class="choice-reasons__wrapper choice-reasons__content_grey-theme">
+          <div class="choice-reasons__content">
             <h3 class="choice-reasons__name">Небольшая площадь</h3>
             <p class="choice-reasons__number">— №3 —</p>
             <p class="choice-reasons__text">Все интересные места находятся очень близко</p>
           </div>
-          <div class="choice-reasons__content choice-reasons__content_grey-theme">
+          <div class="choice-reasons__content">
             <h3 class="choice-reasons__name">Красивая дорога</h3>
             <p class="choice-reasons__number">— №4 —</p>
             <p class="choice-reasons__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
-          <div class="choice-reasons__content choice-reasons__content_grey-theme">
+          <div class="choice-reasons__content">
             <h3 class="choice-reasons__name">Мало туристов</h3>
             <p class="choice-reasons__number">— №5 —</p>
             <p class="choice-reasons__text">Большинство едет в Гранд Каньон и толпится там</p>

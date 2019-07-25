@@ -1,8 +1,34 @@
 .header {
   width: @width-mobile;
-  outline: 1px solid blue;
+  margin: 0 auto;
 }
 
-.header__logo {
+.header__logo img {
+  display: block;
+}
 
+//вресия для планшета
+@media (min-width: 768px) {
+  .header {
+    position: relative;
+    display: flex;
+    width: @width-tablet;
+  }
+
+  .header__logo {
+    position: absolute;
+    left: 333px;
+  }
+}
+
+//версия декстоп
+@media (min-width: 1200px) {
+  .header {
+    width: @width-desktop;
+    padding: 0 40px;
+  }
+
+  .header__logo {
+    left: 593px;
+  }
 }

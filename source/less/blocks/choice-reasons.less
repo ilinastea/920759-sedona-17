@@ -1,28 +1,66 @@
-.choice-reasons {
-  width: @width-mobile;
-  outline: 1px solid red;
-}
-
-.choice-reasons__name,
-.choice-reasons__number,
-.choice-reasons__text {
-  margin: 0;
-  padding: 0;
-}
-
-.choice-reasons__name {
-  .font-header;
-}
-
-.choice-reasons__number,
-.choice-reasons__text {
-  .font-content(21px);
+.choice-reasons__photo img {
+  display: block;
 }
 
 .choice-reasons__content_blue-theme {
-  .blue-theme-default;
+  .blue-theme;
 }
 
 .choice-reasons__content_grey-theme {
   background: #eeeeee;
+}
+
+.choice-reasons {
+  width: @width-mobile;
+  margin: 0 auto;
+}
+
+.choice-reasons__content {
+  text-align: center;
+}
+
+.choice-reasons__name {
+  margin: 0;
+  padding: 0;
+  .font-header(18px);
+}
+
+.choice-reasons__number,
+.choice-reasons__text {
+  margin: 0;
+  padding: 0;
+  .font-content(21px);
+}
+
+//вресия для планшета
+@media (min-width: 768px) {
+  .choice-reasons {
+    width: @width-tablet;
+    margin: 0 auto;
+  }
+
+  .choice-reasons__wrapper {
+    display: flex;
+  }
+
+  .choice-reasons__content {
+    width: 256px;
+  }
+
+  .choice-reasons__name {
+    .font-header(21px);
+  }
+}
+
+//вресия десктоп
+@media (min-width: 1200px) {
+  .choice-reasons {
+    width: @width-desktop;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
+
+  .choice-reasons__content {
+    width: 400px;
+  }
 }

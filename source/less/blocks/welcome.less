@@ -1,23 +1,62 @@
-.welcome {
-  margin: 0;
-  padding: 0;
-  width: @width-mobile;
-  outline: 1px solid black;
-}
-
-.welcome__title {
-  margin: 0;
-  padding: 0;
-  .font-header;
-}
-
-.welcome__intro {
-  margin: 0;
-  padding: 0;
-  .font-content(26px);
+.welcome__background img,
+.welcome__sedona-index img,
+.welcome__sedona img {
+  display: block;
 }
 
 .welcome__head {
   margin: 0;
   padding: 0;
+}
+
+//мобильная версия
+@media (min-width: 320px) {
+  .welcome {
+    width: @width-mobile;
+    margin: 0 auto;
+  }
+
+  .welcome__title {
+    width: 264px;
+    margin: 38px auto 28px;
+    text-align: center;
+    .font-header(18px);
+  }
+
+  .welcome__intro {
+    width: 264px;
+    margin: 0 auto 28px;
+    text-align: center;
+    .font-content(26px);
+  }
+}
+
+//вресия для планшета
+@media (min-width: 768px) {
+  .welcome {
+    width: @width-tablet;
+  }
+
+  .welcome__title {
+    width: 445px;
+    margin: 38px auto 28px;
+    .font-header(21px);
+  }
+
+  .welcome__intro {
+    width: 500px;
+    margin: 0 auto 46px;
+  }
+}
+
+//версия декстоп
+@media (min-width: 1200px) {
+  .welcome {
+    width: @width-desktop;
+    padding: 0 40px;
+  }
+
+  .welcome__title {
+    .font-header(21px);
+  }
 }

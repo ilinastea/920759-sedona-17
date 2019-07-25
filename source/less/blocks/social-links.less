@@ -1,4 +1,21 @@
 .social-links {
   width: @width-mobile;
-  outline: 1px solid blue;
+  margin: 0 auto;
+}
+
+//вресия для планшета
+@media (min-width: 768px) {
+  .social-links {
+    width: @width-tablet;
+    margin: 0 auto;
+  }
+}
+
+//вресия десктоп
+@media (min-width: 1200px) {
+  .social-links {
+    width: @width-desktop;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 }
