@@ -1,26 +1,6 @@
 .feedback-form {
-}
-
-@media (min-width: 320px) {
-  .feedback-form {
-    width: @width-mobile;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 768px) {
-  .feedback-form {
-    width: @width-tablet;
-    margin: 0 auto;
-  }
-}
-
-@media (min-width: 1200px) {
-  .feedback-form {
-    width: @width-desktop;
-    margin: 0 auto;
-    padding: 0 40px;
-  }
+  width: @width-mobile;
+  margin: 0 auto;
 }
 
 .feedback-form__set {
@@ -51,7 +31,7 @@
 .feedback-form__field-input,
 .feedback-form__text,
 &::placeholder {
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   // .font-header-mobile;
   color: #000000;
   text-transform: none;
@@ -59,7 +39,6 @@
 
 .feedback-form__radio,
 .feedback-form__checkbox {
-  // .font-header-mobile;
   text-transform: none;
 }
 
@@ -68,10 +47,25 @@
   padding: 0;
   border: 0;
   outline: none;
-  font-family: 'PT Sans', 'Arial', sans-serif;
+  font-family: "PT Sans", "Arial", sans-serif;
   font-size: 21px;
   font-weight: 700;
   line-height: 26px;
   text-transform: uppercase;
   .blue-theme;
+}
+
+@media (min-width: 768px) {
+  .feedback-form {
+    width: @width-tablet;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1200px) {
+  .feedback-form {
+    width: @width-desktop;
+    margin: 0 auto;
+    padding: 0 40px;
+  }
 }

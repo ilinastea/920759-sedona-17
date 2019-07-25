@@ -4,18 +4,25 @@
   display: block;
 }
 
+.welcome__head {
+  margin: 0;
+  padding: 0;
+}
+
 //мобильная версия
 @media (min-width: 320px) {
   .welcome {
     width: @width-mobile;
     margin: 0 auto;
   }
+
   .welcome__title {
     width: 264px;
     margin: 38px auto 28px;
     text-align: center;
     .font-header(18px);
   }
+
   .welcome__intro {
     width: 264px;
     margin: 0 auto 28px;
@@ -29,11 +36,13 @@
   .welcome {
     width: @width-tablet;
   }
+
   .welcome__title {
     width: 445px;
     margin: 38px auto 28px;
     .font-header(21px);
   }
+
   .welcome__intro {
     width: 500px;
     margin: 0 auto 46px;
@@ -46,12 +55,8 @@
     width: @width-desktop;
     padding: 0 40px;
   }
+
   .welcome__title {
     .font-header(21px);
   }
-}
-
-.welcome__head {
-  margin: 0;
-  padding: 0;
 }

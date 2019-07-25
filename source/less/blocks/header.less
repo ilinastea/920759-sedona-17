@@ -1,9 +1,10 @@
-//мобильная версия
-@media (min-width: 320px) {
-  .header {
-    width: @width-mobile;
-    margin: 0 auto;
-  }
+.header {
+  width: @width-mobile;
+  margin: 0 auto;
+}
+
+.header__logo img {
+  display: block;
 }
 
 //вресия для планшета
@@ -13,6 +14,7 @@
     display: flex;
     width: @width-tablet;
   }
+
   .header__logo {
     position: absolute;
     left: 333px;
@@ -25,11 +27,8 @@
     width: @width-desktop;
     padding: 0 40px;
   }
+
   .header__logo {
     left: 593px;
   }
-}
-
-.header__logo img {
-  display: block;
 }

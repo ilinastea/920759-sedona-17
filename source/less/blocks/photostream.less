@@ -1,28 +1,27 @@
-//мобильная версия
-@media (min-width: 320px) {
-  .photostream {
-    width: @width-mobile;
-    margin: 0 auto;
-  }
-  .photostream__head {
-    margin: 32px 0 36px;
-    padding: 0;
-    text-align: center;
-    .font-header(18px);
-  }
-  .photostream__text {
-    width: 280px;
-    margin: 0 auto 50px;
-    padding: 0;
-    text-align: center;
-    .font-content(24px);
-  }
-  .photostream__list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+.photostream {
+  width: @width-mobile;
+  margin: 0 auto;
+}
 
+.photostream__head {
+  margin: 32px 0 36px;
+  padding: 0;
+  text-align: center;
+  .font-header(18px);
+}
+
+.photostream__text {
+  width: 280px;
+  margin: 0 auto 50px;
+  padding: 0;
+  text-align: center;
+  .font-content(24px);
+}
+
+.photostream__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 //вресия для планшета
@@ -31,26 +30,37 @@
     width: @width-tablet;
     margin: 0 auto;
   }
+
   .photostream__head {
     margin: 72px 0 36px;
     .font-header(30px);
   }
+
   .photostream__text {
     width: 450px;
     margin: 0 auto 64px;
   }
+
   .photostream__list {
     display: flex;
     flex-wrap: wrap;
     width: 650px;
     margin: 0 auto;
   }
+
   .photostream__item {
     width: 325px;
   }
-  .photostream__item:first-child {
-    // flex-grow: 4;
-  }
+
+  // .photostream__item:first-child {
+  //   flex-grow: 4;
+  // }
+
+  // .photostream__item:nth-child(2),
+  // .photostream__item:nth-child(3),
+  // .photostream__item:nth-child(4) {
+  //   flex-grow: 1;
+  // }
 }
 
 //версия декстоп
@@ -60,27 +70,35 @@
     margin: 0 auto;
     padding: 0 40px;
   }
+
   .photostream__head {
     margin: 102px 0 36px;
     .font-header(30px);
   }
+
   .photostream__text {
     width: 450px;
     margin: 0 auto 72px;
   }
+
   .photostream__list {
     display: flex;
     flex-wrap: wrap;
     width: 1200px;
     margin: 0 auto;
   }
+
   .photostream__item {
     width: 400px;
   }
-  .photostream__item:first-child {
-  }
-  .photostream__item:nth-child(2),
-  .photostream__item:nth-child(3),
-  .photostream__item:nth-child(4) {
-  }
+
+  // .photostream__item:first-child {
+  //   flex-grow: 3;
+  // }
+  //
+  // .photostream__item:nth-child(2),
+  // .photostream__item:nth-child(3),
+  // .photostream__item:nth-child(4) {
+  //   flex-grow: 1;
+  // }
 }
