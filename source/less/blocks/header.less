@@ -1,27 +1,50 @@
 .header {
+  position: relative;
   width: @width-mobile;
   margin: 0 auto;
 }
 
-.header__logo img {
+.header__wrapper {
   display: block;
+  padding: 16px 20px 16px 277px;
+}
+
+.header__logo {
+  position: absolute;
+  top: 224px;
+  left: 109px;
+}
+
+.header__menu-toggle {
+  display: block;
+  width: 23px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  background: url("../img/icon-menu.svg") no-repeat;
 }
 
 //вресия для планшета
 @media (min-width: 768px) {
   .header {
-    position: relative;
     display: flex;
     width: @width-tablet;
   }
 
   .header__logo {
-    position: absolute;
+    top: 0;
     left: 333px;
+  }
+
+  .header__wrapper,
+  .header__menu-toggle {
+    display: none;
   }
 }
 
-//версия декстоп
+//версия десктоп
 @media (min-width: 1200px) {
   .header {
     width: @width-desktop;

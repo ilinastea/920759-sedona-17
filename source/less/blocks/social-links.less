@@ -1,6 +1,16 @@
 .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: @width-mobile;
-  margin: 0 auto;
+  margin: 40px auto;
+}
+
+.social-links__item {
+  width: 46px;
+  height: 48px;
+  margin-right: 6px;
+  background-color: #81b3d2;
 }
 
 //вресия для планшета
@@ -15,7 +25,5 @@
 @media (min-width: 1200px) {
   .social-links {
     width: @width-desktop;
-    margin: 0 auto;
-    padding: 0 40px;
   }
 }

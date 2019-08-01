@@ -1,0 +1,57 @@
+.hotel-search {
+  width: @width-mobile;
+  margin: 30px auto 36px;
+}
+
+.hotel-search__title {
+  width: 280px;
+  margin: 0 auto 20px;
+  padding: 0;
+  text-align: center;
+  .font-header(21px);
+}
+
+.hotel-search__text {
+  width: 280px;
+  margin: 0 auto 34px;
+  padding: 0;
+  text-align: center;
+  .font-content(24px);
+}
+
+.hotel-search__action {
+  width: 280px;
+  margin: 0 auto;
+  padding: 14px 0;
+  text-align: center;
+  .font-header(21px);
+  .blue-theme;
+}
+
+//вресия для планшета
+@media (min-width: 768px) {
+  .hotel-search {
+    width: @width-tablet;
+  }
+
+  .hotel-search__title {
+    width: 460px;
+    .font-header(30px);
+  }
+
+  .hotel-search__text {
+    width: 460px;
+  }
+
+  .hotel-search__action {
+    width: 460px;
+  }
+}
+
+//версия десктоп
+@media (min-width: 1200px) {
+  .hotel-search {
+    width: @width-desktop;
+    padding: 0 40px;
+  }
+}

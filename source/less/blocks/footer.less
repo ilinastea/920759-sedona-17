@@ -4,6 +4,7 @@
   align-items: center;
   width: @width-mobile;
   margin: 0 auto;
+  padding: 36px 0 22px;
 }
 
 .footer__hashtag-visitsedona {
@@ -21,6 +22,7 @@
 
 .footer__about-developer {
   display: flex;
+  align-items: center;
 }
 
 .footer__developed-by {
@@ -29,11 +31,24 @@
   .font-content(26px);
 }
 
+.footer__about-developer img {
+  display: block;
+}
+
 //вресия для планшета
 @media (min-width: 768px) {
   .footer {
-    flex-direction: row;
     width: @width-tablet;
+    flex-direction: row;
+    padding: 36px 0;
+  }
+
+  .footer__hashtag-visitsedona {
+    margin-left: 60px;
+  }
+
+  .footer__about-developer {
+    margin-right: 60px;
   }
 }
 
@@ -41,6 +56,16 @@
 @media (min-width: 1200px) {
   .footer {
     width: @width-desktop;
-    padding: 0 40px;
+    padding: 36px 40px;
+  }
+
+  .footer__hashtag-visitsedona {
+    margin: 0;
+    padding-left: 80px;
+  }
+
+  .footer__about-developer {
+    margin: 0;
+    padding-right: 80px;
   }
 }

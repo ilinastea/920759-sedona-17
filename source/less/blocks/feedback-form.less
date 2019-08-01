@@ -1,4 +1,6 @@
 .feedback-form {
+  display: flex;
+  flex-direction: column;
   width: @width-mobile;
   margin: 0 auto;
 }
@@ -37,6 +39,13 @@
   text-transform: none;
 }
 
+.feedback-form__text {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
 .feedback-form__radio,
 .feedback-form__checkbox {
   text-transform: none;
@@ -44,7 +53,7 @@
 
 .feedback-form__send {
   margin: 0;
-  padding: 0;
+  padding: 20px 40px;
   border: 0;
   outline: none;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -55,17 +64,53 @@
   .blue-theme;
 }
 
+//вресия для планшета
 @media (min-width: 768px) {
   .feedback-form {
+    flex-direction: row;
+    flex-wrap: wrap;
     width: @width-tablet;
     margin: 0 auto;
   }
+
+  .feedback-form__set:nth-child(1),
+  .feedback-form__set:nth-child(3) {
+    width: 384px;
+  }
+
+  .feedback-form__set {
+    width: 768px;
+  }
+
+  .feedback-form__set_order {
+    order: -1;
+  }
+
+  .feedback-form__send {
+    width: 324px;
+    padding: 16px 65px;
+  }
 }
 
+//версия десктоп
 @media (min-width: 1200px) {
   .feedback-form {
     width: @width-desktop;
     margin: 0 auto;
-    padding: 0 40px;
+    padding: 0;
+  }
+
+  .feedback-form__set:nth-child(1),
+  .feedback-form__set:nth-child(3) {
+    width: 600px;
+  }
+
+  .feedback-form__set {
+    width: 1200px;
+  }
+
+  .feedback-form__send {
+    width: 480px;
+    padding: 16px 148px;
   }
 }
