@@ -10,13 +10,17 @@
     <header class="header">
       <nav class="main-nav">
         <ul class="main-nav__list menu">
-          <li class="menu__item">Главная</li>
+          <li class="menu__item menu__active-page">Главная</li>
           <li class="menu__item"><a class="menu__link" href="photo.html">Фото и видео</a></li>
           <li class="menu__item"><a class="menu__link" href="form.html">Форма отзыва</a></li>
-          <li class="menu__item"><a class="menu__link" href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
+          <li class="menu__item"><a class="menu__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a></li>
         </ul>
-        <button class="main-nav__toggle main-nav__toggle_opened" type="button">Открыть меню</button>
       </nav>
+      <div class="header__wrapper">
+        <button class="header__menu-toggle header__menu-toggle_opened" type="button">
+          <span class="hidden">Открыть меню</span>
+        </button>
+      </div>
       <a class="header__logo"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип City of Sedona"></a>
     </header>
     <main class="">
@@ -30,55 +34,68 @@
       <section class="choice-reasons">
         <div class="choice-reasons__wrapper">
           <div class="choice-reasons__content choice-reasons__content_blue-theme">
-            <h3 class="choice-reasons__name">Настоящий городок</h3>
+            <h3 class="choice-reasons__title">Настоящий городок</h3>
             <p class="choice-reasons__number">— №1 —</p>
-            <p class="choice-reasons__text">Седона - не аттракцион для туристов, там течёт своя жизнь</p>
+            <p class="choice-reasons__text">Седона не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
-          <a class="choice-reasons__photo"><img src="http://placehold.it/320x260" width="320" height="260" alt=""></a>
+          <a class="choice-reasons__photo"><img src="http://placehold.it/320x260" width="320" height="256" alt=""></a>
         </div>
         <div class="trip-advices">
           <div class="trip-advices__wrapper">
             <a class="trip-advices__icon"><img src="http://placehold.it/39x37" width="39" height="37" alt=""></a>
-            <h4 class="trip-advices__name">Жильё</h4>
-            <p class="trip-advices__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            <div class="trip-advices__content">
+              <h4 class="trip-advices__title">Жильё</h4>
+              <p class="trip-advices__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
+            </div>
           </div>
-          <div class="trip-advices__wrapper">
+          <div class="trip-advices__wrapper trip-advices__wrapper_order">
             <a class="trip-advices__icon"><img src="http://placehold.it/32x38" width="32" height="38" alt=""></a>
-            <h4 class="trip-advices__name">Сувениры</h4>
-            <p class="trip-advices__text">Не только китайского, но и местного производства!</p>
+            <div class="trip-advices__content">
+              <h4 class="trip-advices__title">Сувениры</h4>
+              <p class="trip-advices__text">Не только китайского, но и местного производства!</p>
+            </div>
           </div>
           <div class="trip-advices__wrapper">
             <a class="trip-advices__icon"><img src="http://placehold.it/40x35" width="40" height="35" alt=""></a>
-            <h4 class="trip-advices__name">Еда</h4>
-            <p class="trip-advices__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            <div class="trip-advices__content">
+              <h4 class="trip-advices__title">Еда</h4>
+              <p class="trip-advices__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+            </div>
           </div>
         </div>
         <div class="choice-reasons__wrapper">
           <div class="choice-reasons__content choice-reasons__content_blue-theme">
-            <h3 class="choice-reasons__name">Там есть мост дьявола</h3>
+            <h3 class="choice-reasons__title">Там есть мост дьявола</h3>
             <p class="choice-reasons__number">— №2 —</p>
             <p class="choice-reasons__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-          <a class="choice-reasons__photo"><img src="http://placehold.it/320x260" width="320" height="260" alt=""></a>
+          <a class="choice-reasons__photo choice-reasons__photo_order"><img src="http://placehold.it/320x260" width="320" height="256" alt=""></a>
         </div>
-        <div class="choice-reasons__wrapper choice-reasons__content_grey-theme">
-          <div class="choice-reasons__content">
-            <h3 class="choice-reasons__name">Небольшая площадь</h3>
+        <div class="choice-reasons__wrapper">
+          <div class="choice-reasons__content choice-reasons__content_grey-theme">
+            <h3 class="choice-reasons__title">Небольшая площадь</h3>
             <p class="choice-reasons__number">— №3 —</p>
             <p class="choice-reasons__text">Все интересные места находятся очень близко</p>
           </div>
-          <div class="choice-reasons__content">
-            <h3 class="choice-reasons__name">Красивая дорога</h3>
+          <div class="choice-reasons__content choice-reasons__content_grey-theme">
+            <h3 class="choice-reasons__title">Красивая дорога</h3>
             <p class="choice-reasons__number">— №4 —</p>
             <p class="choice-reasons__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
-          <div class="choice-reasons__content">
-            <h3 class="choice-reasons__name">Мало туристов</h3>
+          <div class="choice-reasons__content choice-reasons__content_grey-theme">
+            <h3 class="choice-reasons__title">Мало туристов</h3>
             <p class="choice-reasons__number">— №5 —</p>
             <p class="choice-reasons__text">Большинство едет в Гранд Каньон и толпится там</p>
           </div>
         </div>
       </section>
+      <section class="hotel-search">
+        <h2 class="hotel-search__title">Заинтересовались?</h2>
+        <p class="hotel-search__text">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+        <h3 class="hotel-search__action">Найти гостиницу</h3>
+      </section>
+      <div class="map">
+      </div>
     </main>
     <footer class="footer">
       <p class="footer__hashtag-visitsedona">#Visitsedona</p>
@@ -101,7 +118,7 @@
       </ul>
       <div class="footer__about-developer">
         <p class="footer__developed-by">Разработано</p>
-        <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+        <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
         </a>
       </div>

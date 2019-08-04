@@ -3,8 +3,12 @@
   margin: 0 auto;
 }
 
-.photostream__head {
-  margin: 32px 0 36px;
+.photostream__item {
+  margin: 0 20px;
+}
+
+.photostream__title {
+  margin: 32px 0 30px;
   padding: 0;
   text-align: center;
   .font-header(18px);
@@ -31,7 +35,7 @@
     margin: 0 auto;
   }
 
-  .photostream__head {
+  .photostream__title {
     margin: 72px 0 36px;
     .font-header(30px);
   }
@@ -49,21 +53,16 @@
   }
 
   .photostream__item {
-    width: 325px;
+    width: 324px;
+    margin: 0;
   }
 
-  // .photostream__item:first-child {
-  //   flex-grow: 4;
-  // }
-
-  // .photostream__item:nth-child(2),
-  // .photostream__item:nth-child(3),
-  // .photostream__item:nth-child(4) {
-  //   flex-grow: 1;
-  // }
+  .photostream__item:first-child {
+    width: 648px;
+  }
 }
 
-//версия декстоп
+//версия десктоп
 @media (min-width: 1200px) {
   .photostream {
     width: @width-desktop;
@@ -71,7 +70,7 @@
     padding: 0 40px;
   }
 
-  .photostream__head {
+  .photostream__title {
     margin: 102px 0 36px;
     .font-header(30px);
   }
@@ -92,13 +91,7 @@
     width: 400px;
   }
 
-  // .photostream__item:first-child {
-  //   flex-grow: 3;
-  // }
-  //
-  // .photostream__item:nth-child(2),
-  // .photostream__item:nth-child(3),
-  // .photostream__item:nth-child(4) {
-  //   flex-grow: 1;
-  // }
+  .photostream__item:first-child {
+    width: 1200px;
+  }
 }

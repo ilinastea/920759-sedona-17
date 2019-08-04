@@ -1,6 +1,19 @@
 .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: @width-mobile;
-  margin: 0 auto;
+  margin: 34px auto 40px;
+}
+
+.social-links__item {
+  width: 46px;
+  height: 46px;
+  background-color: #81b3d2;
+}
+
+.social-links__item:not(:last-child) {
+  margin-right: 6px;
 }
 
 //вресия для планшета
@@ -9,13 +22,16 @@
     width: @width-tablet;
     margin: 0 auto;
   }
+
+  .social-links__item {
+    width: 48px;
+    height: 46px;
+  }
 }
 
 //вресия десктоп
 @media (min-width: 1200px) {
   .social-links {
     width: @width-desktop;
-    margin: 0 auto;
-    padding: 0 40px;
   }
 }
