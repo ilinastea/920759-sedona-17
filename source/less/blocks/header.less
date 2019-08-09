@@ -1,7 +1,5 @@
 .header {
   position: relative;
-  width: @width-mobile;
-  margin: 0 auto;
 }
 
 .header__wrapper {
@@ -13,6 +11,7 @@
   position: absolute;
   top: 224px;
   left: 109px;
+  z-index: 1;
 }
 
 .header__menu-toggle {
@@ -26,11 +25,10 @@
   background: url("../img/icon-menu.svg") no-repeat;
 }
 
-//вресия для планшета
+//версия для планшета
 @media (min-width: 768px) {
   .header {
     display: flex;
-    width: @width-tablet;
   }
 
   .header__logo {
@@ -46,12 +44,12 @@
 
 //версия десктоп
 @media (min-width: 1200px) {
-  .header {
-    width: @width-desktop;
-    padding: 0 40px;
-  }
-
   .header__logo {
-    left: 593px;
+    left: 506px;
+
+    & img {
+      width: 188px;
+      height: 96px;
+    }
   }
 }

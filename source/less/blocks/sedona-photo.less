@@ -1,9 +1,5 @@
-.sedona-photo__picture img {
-  display: block;
-}
-
 .sedona-photo__wrapper {
-  margin: 16px 0;
+  padding: 16px 0 20px;
 }
 
 .sedona-photo__title {
@@ -21,35 +17,113 @@
   text-transform: none;
 }
 
+.sedona-photo__like {
+  display: flex;
+  margin-top: 6px;
+}
+
 .sedona-photo__like-button {
   margin: 0;
   padding: 0;
   border: 0;
   outline: none;
+  background: none;
+}
+
+.sedona-photo__like-button svg {
+  width: 23px;
+  height: 21px;
+  opacity: 0.4;
 }
 
 .sedona-photo__like-number {
-  margin: 0;
+  margin: 0 0 0 16px;
   padding: 0;
-  .font-content(24px);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24px;
 }
 
-//вресия для планшета
+//версия для планшета
 @media (min-width: 768px) {
   .sedona-photo {
     display: flex;
     flex-direction: column;
   }
 
+  .sedona-photo__picture {
+    &_sunset img {
+      width: 648px;
+      height: 400px;
+    }
+
+    &_cactus img,
+    &_roads img,
+    &_bridge img {
+      width: 324px;
+      height: 267px;
+    }
+  }
+
   .sedona-photo__wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 20px;
+    padding: 16px 20px;
+    align-items: center;
+    background-color: #f2f2f2;
+  }
+
+  .sedona-photo__like-button {
+    background-color: #f2f2f2;
+  }
+
+  .sedona-photo__like-number {
+    margin-left: 10px;
   }
 }
 
-//версия десктоп
-// @media (min-width: 1200px) {
-//   .sedona-photo {
-//   }
-// }
+//версия для десктопа
+@media (min-width: 1200px) {
+  .sedona-photo {
+    position: relative;
+  }
+
+  .sedona-photo__picture {
+    &_sunset img {
+      width: 1200px;
+    }
+
+    &_cactus img,
+    &_roads img,
+    &_bridge img {
+      width: 400px;
+    }
+  }
+
+  .sedona-photo__wrapper {
+    position: absolute;
+    bottom: 0;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.3);
+
+    &_desktop-long {
+      width: 1160px;
+    }
+
+    &_desktop-short {
+      width: 360px;
+    }
+  }
+
+  .sedona-photo__like-button {
+    background: rgba(0, 0, 0, 0.3);
+  }
+
+  .sedona-photo__like-button svg {
+    opacity: 1;
+  }
+
+  .sedona-photo__like-button path {
+    fill: #ffffff;
+  }
+}

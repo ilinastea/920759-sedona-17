@@ -11,11 +11,10 @@
   padding: 0 20px;
   border: 0;
   outline: none;
-}
 
-.feedback-form__set:not(:nth-child(5)) {
-  // padding-bottom: 25px;
-  border-bottom: 1px solid #f2f2f2;
+  &:not(:nth-child(5)) {
+    border-bottom: 1px solid #f2f2f2;
+  }
 }
 
 .feedback-form__title {
@@ -33,8 +32,8 @@
 
 .feedback-form__fullname-input,
 .feedback-form__contact-input,
-.feedback-form__impression,
 .feedback-form__showplace,
+.feedback-form__impression,
 .feedback-form__text,
 &::placeholder {
   border: 0;
@@ -44,29 +43,41 @@
   text-transform: none;
 }
 
-.feedback-form__fullname-field,
-.feedback-form__contact-field {
+// .feedback-form__showplace label,
+// .feedback-form__impression label {
+//   font-size: 18px;
+//   font-weight: 700;
+//   line-height: 26px;
+// }
+
+//______________________фио_____________________
+.feedback-form__fullname-field {
   margin: 0;
   padding: 0;
   .font-content(26px);
-}
 
-.feedback-form__fullname-field:not(:last-child) {
-  margin-bottom: 20px;
-}
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 
-.feedback-form__fullname-field:last-child {
-  margin-bottom: 25px;
+  &:last-child {
+    margin-bottom: 25px;
+  }
 }
 
 .feedback-form__fullname-wrapper {
   display: flex;
   align-items: center;
   width: 280px;
+
+  &:not(&_name) {
+    justify-content: space-between;
+  }
 }
 
-.feedback-form__fullname-wrapper:not(.feedback-form__fullname-wrapper_name) {
-  justify-content: space-between;
+.feedback-form__fullname-wrapper_name .feedback-form__fullname-input {
+  width: 190px;
+  margin-left: auto;
 }
 
 .feedback-form__fullname-input {
@@ -75,27 +86,38 @@
   padding: 16px 20px;
   background-color: #f2f2f2;
   outline: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: #ffffff;
+    outline: 4px solid #e5e5e5;
+  }
 }
 
-.feedback-form__fullname-wrapper_name .feedback-form__fullname-input {
-  width: 190px;
-  margin-left: auto;
-}
+//______________________контакты_____________________
+.feedback-form__contact-field {
+  margin: 0;
+  padding: 0;
+  .font-content(26px);
 
-.feedback-form__contact-field:not(:last-child) {
-  margin-bottom: 14px;
-}
+  &:not(:last-child) {
+    margin-bottom: 14px;
+  }
 
-.feedback-form__contact-field:last-child {
-  margin-bottom: 30px;
-}
+  &:last-child {
+    margin-bottom: 30px;
+  }
 
-.feedback-form__contact-field_label_short {
-  display: none;
-}
+  &_label-short {
+    display: none;
+  }
 
-.feedback-form__contact-field label {
-  padding-left: 20px;
+  & label {
+    padding-left: 20px;
+  }
 }
 
 .feedback-form__contact-wrapper {
@@ -109,6 +131,23 @@
   padding: 15px 20px;
   background-color: #f2f2f2;
   outline: none;
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    background-color: #ffffff;
+    outline: 4px solid #e5e5e5;
+  }
+
+  &:focus + .feedback-form__phone-btn {
+    outline: 2px solid #e5e5e5;
+  }
+
+  &:focus + .feedback-form__email-btn {
+    outline: 2px solid #e5e5e5;
+  }
 }
 
 .feedback-form__phone-btn,
@@ -145,29 +184,28 @@
   background: url("../img/icon-mail.svg") no-repeat;
 }
 
-.feedback-form__impression,
-.feedback-form__showplace {
+//______________________впечатления_____________________
+.feedback-form__impression {
   text-transform: none;
-}
 
-//_______________________впечатления - радиобокс
-.feedback-form__impression:first-child {
-  margin-top: 14px;
-}
+  &:first-child {
+    margin-top: 14px;
+  }
 
-.feedback-form__impression:not(:last-child) {
-  margin-bottom: 44px;
-}
+  &:not(:last-child) {
+    margin-bottom: 44px;
+  }
 
-.feedback-form__impression:last-child {
-  margin-bottom: 44px;
-}
+  &:last-child {
+    margin-bottom: 44px;
+  }
 
-.feedback-form__impression label {
-  position: relative;
-  display: block;
-  margin: 0;
-  padding-left: 79px;
+  & label {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding-left: 79px;
+  }
 }
 
 .feedback-form__radio {
@@ -198,24 +236,41 @@
   background-color: #000000;
 }
 
-//__________________достопримечательности - чекбокс
-.feedback-form__showplace:first-child {
-  margin-top: 12px;
+.feedback-form__radio:hover + label::before,
+.feedback-form__radio:focus + label::before {
+  background-color: #e5e5e5;
 }
 
-.feedback-form__showplace:not(:last-child) {
-  margin-bottom: 54px;
+.feedback-form__radio:active + label::before {
+  background-color: #d5d5d5;
 }
 
-.feedback-form__showplace:last-child {
-  margin-bottom: 44px;
+.feedback-form__radio:active + label::after {
+  background-color: #a4a4a4;
 }
 
-.feedback-form__showplace label {
-  position: relative;
-  display: block;
-  margin: 0;
-  padding-left: 79px;
+//______________________достопримечательности_____________________
+.feedback-form__showplace {
+  text-transform: none;
+
+  &:first-child {
+    margin-top: 12px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 54px;
+  }
+
+  &:last-child {
+    margin-bottom: 44px;
+  }
+
+  & label {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding-left: 79px;
+  }
 }
 
 .feedback-form__checkbox {
@@ -244,7 +299,16 @@
   border-radius: 5px;
   background-color: #f2f2f2;
 }
-//________________________________________________
+
+.feedback-form__checkbox:hover + label::before,
+.feedback-form__checkbox:focus + label::before {
+  background-color: #e5e5e5;
+}
+
+.feedback-form__checkbox:active + label::before {
+  background-color: #e5e5e5;
+}
+//___________________________________________
 
 .feedback-form__text {
   display: block;
@@ -266,6 +330,16 @@
   line-height: 26px;
   text-transform: uppercase;
   .blue-theme;
+
+  &:hover,
+  &:focus {
+    background-color: @blue-theme-hover;
+  }
+
+  &:active {
+    color: #94b9d2;
+    background-color: @blue-theme-active;
+  }
 }
 
 .feedback-form__required-fields {
@@ -286,49 +360,48 @@
     width: @width-tablet-form;
     margin: 0;
     padding: 0;
-  }
 
-  .feedback-form__set:not(:nth-child(5)) {
-    border: none;
-  }
+    &:not(:nth-child(5)) {
+      border: none;
+    }
 
-  .feedback-form__set:nth-child(1),
-  .feedback-form__set:nth-child(3) {
-    width: 324px;
-    // margin: 0 auto;
-  }
+    &:nth-child(1),
+    &:nth-child(3) {
+      width: 324px;
+    }
 
-  .feedback-form__set_order {
-    order: -1;
+    &_order {
+      order: -1;
+    }
   }
 
   .feedback-form__title {
     padding: 0 0 58px;
     text-align: left;
     .font-header(21px);
-  }
 
-  .introduce {
-    margin-left: 58px;
-  }
+    &_introduce {
+      margin-left: 58px;
+    }
 
-  .contact-info,
-  .showplaces,
-  .feedback {
-    width: 400px;
-    text-align: center;
-  }
+    &_contact,
+    &_showplaces,
+    &_feedback {
+      width: 400px;
+      text-align: center;
+    }
 
-  .contact-info {
-    padding: 26px 0;
-  }
+    &_contact {
+      padding: 26px 0;
+    }
 
-  .showplaces {
-    padding: 55px 0 20px;
-  }
+    &_showplaces {
+      padding: 55px 0 20px;
+    }
 
-  .feedback {
-    padding: 34px 0 54px;
+    &_feedback {
+      padding: 34px 0 54px;
+    }
   }
 
   .feedback-form__fullname-wrapper {
@@ -344,61 +417,63 @@
     width: 138px;
   }
 
-  .feedback-form__contact-field:not(:last-child) {
-    margin-bottom: 24px;
-  }
+  .feedback-form__contact-field {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
 
-  .feedback-form__contact-field:last-child {
-    margin-bottom: 0;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .feedback-form__contact-input {
     width: 550px;
   }
 
-  .feedback-form__impression:first-child {
-    // margin-top: 14px;
+  .feedback-form__impression {
+    &:not(:last-child) {
+      margin-bottom: 54px;
+    }
+
+    &:last-child {
+      margin-bottom: 54px;
+    }
   }
 
-  .feedback-form__impression:not(:last-child) {
-    margin-bottom: 54px;
-  }
-
-  .feedback-form__impression:last-child {
-    margin-bottom: 54px;
-  }
-
-  .feedback-form__list-showplace {
+  .feedback-form__list_showplace {
     display: flex;
     flex-wrap: wrap;
     width: 460px;
     margin: 36px auto 50px;
   }
 
-  .feedback-form__showplace:first-child {
-    margin: 0;
-  }
+  .feedback-form__showplace {
+    &:first-child {
+      margin: 0;
+    }
 
-  .feedback-form__showplace:not(:last-child) {
-    margin: 0;
-  }
+    &:not(:last-child) {
+      margin: 0;
+    }
 
-  .feedback-form__showplace:last-child {
-    margin: 0;
-  }
+    &:last-child {
+      margin: 0;
+    }
 
-  .feedback-form__showplace:nth-child(2n) {
-    margin: 0;
-    margin-left: auto;
-  }
+    &:nth-child(2n) {
+      margin: 0;
+      margin-left: auto;
+    }
 
-  .feedback-form__showplace:nth-child(1),
-  .feedback-form__showplace:nth-child(2) {
-    margin-bottom: 62px;
-  }
+    &:nth-child(1),
+    &:nth-child(2) {
+      margin-bottom: 62px;
+    }
 
-  .feedback-form__showplace label {
-    width: 123px;
+    & label {
+      width: 123px;
+    }
   }
 
   .feedback-form__text {
@@ -424,7 +499,7 @@
 @media (min-width: 1200px) {
   .feedback-form {
     width: @width-desktop-form;
-    margin: 0;
+    margin: 0 auto;
     padding: 0 120px;
   }
 
@@ -432,28 +507,25 @@
     width: @width-desktop-form;
     margin: 0;
     padding: 0;
+
+    &:nth-child(1),
+    &:nth-child(3) {
+      width: 480px;
+    }
   }
 
-  .feedback-form__set:nth-child(1),
-  .feedback-form__set:nth-child(3) {
-    width: 480px;
-    // margin: 0 auto;
-  }
+  .feedback-form__title {
+    &_introduce {
+      margin-left: 78px;
+    }
 
-  // .feedback-form__title {
-  //   text-align: center;
-  // }
+    &_impression {
+      margin-left: 78px;
+    }
 
-  .introduce {
-    margin-left: 78px;
-  }
-
-  .impression {
-    margin-left: 78px;
-  }
-
-  .showplaces {
-    padding: 52px 0 20px;
+    &_showplaces {
+      padding: 52px 0 20px;
+    }
   }
 
   .feedback-form__fullname-wrapper {
@@ -468,7 +540,7 @@
     width: 270px;
   }
 
-  .feedback-form__list-contact {
+  .feedback-form__list_contact {
     display: flex;
     justify-content: space-between;
     margin-top: 54px;
@@ -481,18 +553,26 @@
   .feedback-form__contact-field {
     display: flex;
     align-items: center;
-  }
 
-  .feedback-form__contact-field label {
-    padding: 0;
-  }
+    & label {
+      padding: 0;
+    }
 
-  .feedback-form__contact-field_label_short {
-    display: block;
-  }
+    &_label-short {
+      display: block;
+    }
 
-  .feedback-form__contact-field_label_full {
-    display: none;
+    &_label-full {
+      display: none;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   .feedback-form__contact-input {
@@ -500,28 +580,20 @@
     margin-left: 15px;
   }
 
-  .feedback-form__contact-field:not(:last-child) {
-    margin-bottom: 0;
-  }
-
-  .feedback-form__contact-field:last-child {
-    margin-bottom: 0;
-  }
-
-  .feedback-form__list-showplace {
+  .feedback-form__list_showplace {
     justify-content: space-between;
     flex-wrap: nowrap;
     width: 960px;
-    // margin: 0;
   }
 
-  .feedback-form__showplace:nth-child(2n) {
-    margin: 0;
-  }
+  .feedback-form__showplace {
+    &:nth-child(2n) {
+      margin: 0;
+    }
 
-  .feedback-form__showplace:nth-child(1),
-  .feedback-form__showplace:nth-child(2) {
-    margin-bottom: 0;
+    &:nth-child(1) {
+      margin-bottom: 0;
+    }
   }
 
   .feedback-form__text {

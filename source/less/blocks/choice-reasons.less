@@ -1,26 +1,17 @@
-.choice-reasons {
-  width: @width-mobile;
-  margin: 0 auto;
-}
-
-.choice-reasons__photo img {
-  display: block;
-}
-
 .choice-reasons__content {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
 
-.choice-reasons__content_blue-theme {
-  padding: 40px 0; //checked
-  .blue-theme;
-}
+  &_blue-theme {
+    padding: 40px 0; //checked
+    .blue-theme;
+  }
 
-.choice-reasons__content_grey-theme {
-  padding: 26px 0; //checked
-  background: #eeeeee;
+  &_grey-theme {
+    padding: 26px 0; //checked
+    background: #eeeeee;
+  }
 }
 
 .choice-reasons__title {
@@ -48,30 +39,26 @@
 
 //версия для планшета
 @media (min-width: 768px) {
-  .choice-reasons {
-    width: @width-tablet;
-  }
-
   .choice-reasons__wrapper {
     display: flex;
-  }
-
-  .choice-reasons__photo_order {
-    order: -1;
   }
 
   .choice-reasons__content {
     margin: 0;
     padding: 0;
     width: 256px;
-  }
 
-  .choice-reasons__content_blue-theme {
-    padding: 46px 0 0;
-  }
+    &_blue-theme {
+      padding: 46px 0 0;
+    }
 
-  .choice-reasons__content_grey-theme {
-    padding: 46px 0;
+    &_grey-theme {
+      padding: 44px 0 38px;
+    }
+
+    &_order {
+      order: 1;
+    }
   }
 
   .choice-reasons__title {
@@ -87,28 +74,37 @@
   .choice-reasons__text {
     width: 170px;
   }
+
+  .choice-reasons__photo img {
+    width: 512px;
+  }
 }
 
 //версия десктоп
 @media (min-width: 1200px) {
-  .choice-reasons {
-    width: @width-desktop;
-    padding: 0 40px;
-  }
-
   .choice-reasons__content {
     width: 400px;
-  }
 
-  .choice-reasons__content_blue-theme {
-    padding: 56px 0 0;
-  }
+    &_blue-theme {
+      padding: 56px 0 0;
+    }
 
-  .choice-reasons__content_grey-theme {
-    padding: 46px 0 60px;
+    &_grey-theme {
+      padding: 46px 0 60px;
+    }
   }
 
   .choice-reasons__text {
     width: 270px;
+  }
+
+  .choice-reasons__wrapper-photo {
+    height: 256px;
+    overflow: hidden;
+
+    & img {
+      width: 800px;
+      margin: -72px 0;
+    }
   }
 }
