@@ -7,126 +7,213 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <header class="header">
-      <nav class="main-nav">
-        <ul class="main-nav__list menu">
-          <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
-          <li class="menu__item menu__active-page">Фото и видео</li>
-          <li class="menu__item"><a class="menu__link" href="form.html">Форма отзыва</a></li>
-          <li class="menu__item"><a class="menu__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a></li>
-        </ul>
-      </nav>
-      <div class="header__wrapper">
-        <button class="header__menu-toggle header__menu-toggle_opened" type="button">
-          <span class="hidden">Открыть меню</span>
-        </button>
+    <div class="main-container">
+      <div class="main-container__desktop-bg">
+        <header class="header">
+          <nav class="main-nav">
+            <ul class="main-nav__list menu">
+              <li class="menu__item"><a class="menu__link" href="index.html">Главная</a></li>
+              <li class="menu__item menu__active-page"><a class="menu__link" href="photo.html">Фото и видео</a></li>
+              <li class="menu__item"><a class="menu__link" href="form.html">Форма отзыва</a></li>
+              <li class="menu__item"><a class="menu__link menu__link_shadow" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">HTML Academy</a></li>
+            </ul>
+          </nav>
+          <div class="header__wrapper">
+            <button class="header__menu-toggle header__menu-toggle_opened" type="button">
+              <span class="hidden">Открыть меню</span>
+            </button>
+          </div>
+          <a class="header__logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+              <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип City of Sedona">
+            </picture>
+          </a>
+        </header>
+        <main>
+          <section class="welcome">
+            <h1 class="hidden">Sedona</h1>
+            <div class="welcome__wrapper">
+              <a class="welcome__bg">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/bg-back-desktop@1x.jpg, img/bg-back-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/bg-back-tablet@1x.jpg, img/bg-back-tablet@2x.jpg 2x">
+                  <img src="img/bg-back-mobile@1x.jpg" width="768" height="389" srcset="img/bg-back-mobile@2x.jpg 2x" alt="">
+                </picture>
+              </a>
+              <a class="welcome__text">
+                  <img src="img/text-sedona.svg" width="229" height="39" alt="">
+              </a>
+              <a class="welcome__bg-triangle">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/bg-intro-triangle-desktop.svg">
+                  <source media="(min-width: 768px)" srcset="img/bg-intro-triangle-tablet.svg">
+                  <img src="img/bg-intro-triangle-mobile.svg" width="320" height="27" alt="">
+                </picture>
+              </a>
+            </div>
+          </section>
+          <section class="photostream">
+            <h2 class="photostream__title">Фото и видео</h2>
+            <p class="photostream__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+            <ul class="photostream__list">
+              <li class="photostream__item sedona-photo">
+                <a class="sedona-photo__picture sedona-photo__picture_sunset">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-sunset-desktop@1x.jpg, img/photo-sunset-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-sunset-tablet@1x.jpg, img/photo-sunset-tablet@2x.jpg 2x">
+                    <img src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" srcset="img/photo-sunset-mobile@2x.jpg 2x" alt="Фотография">
+                  </picture>
+                </a>
+                <div class="sedona-photo__wrapper sedona-photo__wrapper_desktop-long">
+                  <div class="sedona-photo__info">
+                    <h3 class="sedona-photo__title">Неродные просторы</h3>
+                    <p class="sedona-photo__author">Автор фото: Борис</p>
+                  </div>
+                  <div class="sedona-photo__like">
+                    <button class="sedona-photo__like-button" type="button">
+                      <span class="hidden">Поставить лайк</span>
+                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                        <g id="Page-1">
+                          <g id="Core" transform="translate(-295.000000, -464.000000)">
+                            <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                              <path id="Shape" fill="#000000" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                    <span class="sedona-photo__like-number">1350</span>
+                  </div>
+                </div>
+              </li>
+              <li class="photostream__item sedona-photo">
+                <a class="sedona-photo__picture sedona-photo__picture_cactus">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-cactus-desktop@1x.jpg, img/photo-cactus-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-cactus-tablet@1x.jpg, img/photo-cactus-tablet@2x.jpg 2x">
+                    <img src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" srcset="img/photo-cactus-mobile@2x.jpg 2x" alt="Фотография">
+                  </picture>
+                </a>
+                <div class="sedona-photo__wrapper sedona-photo__wrapper_desktop-short">
+                  <div class="sedona-photo__info">
+                    <h3 class="sedona-photo__title">Местная растительность</h3>
+                    <p class="sedona-photo__author">Автор фото: Сергей</p>
+                  </div>
+                  <div class="sedona-photo__like">
+                    <button class="sedona-photo__like-button" type="button">
+                      <span class="hidden">Поставить лайк</span>
+                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                        <g id="Page-1">
+                          <g id="Core" transform="translate(-295.000000, -464.000000)">
+                            <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                              <path id="Shape" fill="#000000" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                    <span class="sedona-photo__like-number">143</span>
+                  </div>
+                </div>
+              </li>
+              <li class="photostream__item sedona-photo">
+                <a class="sedona-photo__picture sedona-photo__picture_roads">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-roads-desktop@1x.jpg, img/photo-roads-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-roads-tablet@1x.jpg, img/photo-roads-tablet@2x.jpg 2x">
+                    <img src="img/photo-roads-mobile@1x.jpg" width="280" height="280" srcset="img/photo-roads-mobile@2x.jpg 2x" alt="Фотография">
+                  </picture>
+                </a>
+                <div class="sedona-photo__wrapper sedona-photo__wrapper_desktop-short">
+                  <div class="sedona-photo__info">
+                    <h3 class="sedona-photo__title">Дорога на север</h3>
+                    <p class="sedona-photo__author">Автор фото: Петр</p>
+                  </div>
+                  <div class="sedona-photo__like">
+                    <button class="sedona-photo__like-button" type="button">
+                      <span class="hidden">Поставить лайк</span>
+                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                        <g id="Page-1">
+                          <g id="Core" transform="translate(-295.000000, -464.000000)">
+                            <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                              <path id="Shape" fill="#000000" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                    <span class="sedona-photo__like-number">96</span>
+                  </div>
+                </div>
+              </li>
+              <li class="photostream__item sedona-photo">
+                <a class="sedona-photo__picture sedona-photo__picture_bridge">
+                  <picture>
+                    <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg, img/photo-bridge-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg, img/photo-bridge-tablet@2x.jpg 2x">
+                    <img src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" srcset="img/photo-bridge-mobile@2x.jpg 2x" alt="Фотография">
+                  </picture>
+                </a>
+                <div class="sedona-photo__wrapper sedona-photo__wrapper_desktop-short">
+                  <div class="sedona-photo__info">
+                    <h3 class="sedona-photo__title">Мост дьявола</h3>
+                    <p class="sedona-photo__author">Автор фото: Антон</p>
+                  </div>
+                  <div class="sedona-photo__like">
+                    <button class="sedona-photo__like-button" type="button">
+                      <span class="hidden">Поставить лайк</span>
+                      <svg version="1.0" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22px" height="20px" viewBox="0 0 22 20" enable-background="new 0 0 22 20" xml:space="preserve">
+                        <g id="Page-1">
+                          <g id="Core" transform="translate(-295.000000, -464.000000)">
+                            <g id="thumb-up" transform="translate(295.000000, 464.000000)">
+                              <path id="Shape" fill="#000000" d="M12.383,3.646l-0.637,2.929L11.219,9H13.7h6.2v2c0,0.018,0,0.037,0.001,0.058L17,18H8V8.029 l0.014-0.015L12.383,3.646 M2,10v8V10 M13.2,0L6.6,6.6C6.2,6.9,6,7.4,6,8v10c0,1.1,0.9,2,2,2h9c0.8,0,1.5-0.5,1.8-1.2l3-7.1 C21.9,11.5,21.9,11.2,21.9,11V9H22c0-1.1-0.9-2-2-2h-6.3l1-4.6V2.1c0-0.4-0.2-0.8-0.4-1.1L13.2,0L13.2,0z M4,8H0v12h4V8L4,8z M22,9c0,0.033,0,0.044,0,0.044V9L22,9z"/>
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                    <span class="sedona-photo__like-number">254</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </section>
+          <section class="videostream">
+            <h2 class="videostream__title
+            ">Все еще сомневаетесь?</h2>
+            <p class="videostream__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+            <!--здесь будет видео-->
+          </section>
+        </main>
+        <footer class="footer">
+          <p class="footer__hashtag-visitsedona">#Visitsedona</p>
+          <ul class="footer__social social-links">
+            <li class="social-links__item">
+              <a href="#" target="_blank">
+                <img src="img/icon-twitter.svg" width="18" height="14" alt="Twitter">
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a href="#" target="_blank">
+                <img src="img/icon-facebook.svg" width="9" height="18" alt="Facebook">
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a href="#" target="_blank">
+                <img src="img/icon-youtube.svg" width="20" height="14" alt="Youtube">
+              </a>
+            </li>
+          </ul>
+          <div class="footer__about-developer">
+            <p class="footer__developed-by">Разработано</p>
+            <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+              <img src="img/logo-htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+            </a>
+          </div>
+        </footer>
       </div>
-      <a class="header__logo"><img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип City of Sedona"></a>
-    </header>
-    <main>
-      <section class="welcome">
-        <h1 class="hidden">Sedona</h1>
-        <a class="welcome__background"><img src="http://placehold.it/320x389" width="320" height="389" alt=""></a>
-        <a class="welcome__sedona"><img src="http://placehold.it/229x39" width="229" height="39" alt=""></a>
-      </section>
-      <section class="photostream">
-        <h2 class="photostream__title">Фото и видео</h2>
-        <p class="photostream__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
-        <ul class="photostream__list">
-          <li class="photostream__item sedona-photo">
-            <a class="sedona-photo__picture"><img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография"></a>
-            <div class="sedona-photo__wrapper">
-              <div class="sedona-photo__info">
-                <h3 class="sedona-photo__title">Неродные просторы</h3>
-                <p class="sedona-photo__author">Автор фото: Борис</p>
-              </div>
-              <div class="sedona-photo__like">
-                <button class="sedona-photo__like-button" type="button">
-                  <span class="hidden">Поставить лайк</span>
-                </button>
-                <span class="sedona-photo__like-number">1350</span>
-              </div>
-            </div>
-          </li>
-          <li class="photostream__item sedona-photo">
-            <a class="sedona-photo__picture"><img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография"></a>
-            <div class="sedona-photo__wrapper">
-              <div class="sedona-photo__info">
-                <h3 class="sedona-photo__title">Местная растительность</h3>
-                <p class="sedona-photo__author">Автор фото: Сергей</p>
-              </div>
-              <div class="sedona-photo__like">
-                <button class="sedona-photo__like-button" type="button">
-                  <span class="hidden">Поставить лайк</span>
-                </button>
-                <span class="sedona-photo__like-number">143</span>
-              </div>
-            </div>
-          </li>
-          <li class="photostream__item sedona-photo">
-            <a class="sedona-photo__picture"><img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография"></a>
-            <div class="sedona-photo__wrapper">
-              <div class="sedona-photo__info">
-                <h3 class="sedona-photo__title">Дорога на север</h3>
-                <p class="sedona-photo__author">Автор фото: Петр</p>
-              </div>
-              <div class="sedona-photo__like">
-                <button class="sedona-photo__like-button" type="button">
-                  <span class="hidden">Поставить лайк</span>
-                </button>
-                <span class="sedona-photo__like-number">96</span>
-              </div>
-            </div>
-          </li>
-          <li class="photostream__item sedona-photo">
-            <a class="sedona-photo__picture"><img src="http://placehold.it/280x280" width="280" height="280" alt="Фотография"></a>
-            <div class="sedona-photo__wrapper">
-              <div class="sedona-photo__info">
-                <h3 class="sedona-photo__title">Мост дьявола</h3>
-                <p class="sedona-photo__author">Автор фото: Антон</p>
-              </div>
-              <div class="sedona-photo__like">
-                <button class="sedona-photo__like-button" type="button">
-                  <span class="hidden">Поставить лайк</span>
-                </button>
-                <span class="sedona-photo__like-number">254</span>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </section>
-      <section class="videostream">
-        <h2 class="videostream__title
-        ">Все еще сомневаетесь?</h2>
-        <p class="videostream__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-        <!--здесь будет видео-->
-      </section>
-    </main>
-    <footer class="footer">
-      <p class="footer__hashtag-visitsedona">#Visitsedona</p>
-      <ul class="footer__social social-links">
-        <li class="social-links__item">
-          <a href="#" target="_blank">
-            <span class="hidden">Twitter</span>
-          </a>
-        </li>
-        <li class="social-links__item">
-          <a href="#" target="_blank">
-            <span class="hidden">Facebook</span>
-          </a>
-        </li>
-        <li class="social-links__item">
-          <a href="#" target="_blank">
-            <span class="hidden">Youtube</span>
-          </a>
-        </li>
-      </ul>
-      <div class="footer__about-developer">
-        <p class="footer__developed-by">Разработано</p>
-        <a class="footer__developer-link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
-          <img src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
-        </a>
-      </div>
-    </footer>
+    </div>
   </body>
 </html>

@@ -1,0 +1,25 @@
+.main-container {
+  width: @width-mobile;
+  margin: 0 auto;
+}
+
+//версия для планшета
+@media (min-width: 768px) {
+  .main-container {
+    width: @width-tablet;
+  }
+}
+
+//версия десктоп
+@media (min-width: 1200px) {
+  .main-container {
+    width: @width-desktop;
+    padding: 0 40px;
+    background-color: #f2f2f2;
+  }
+
+  .main-container__desktop-bg {
+    background-color: #ffffff;
+    box-shadow: 6px 0 6px #e1e1e1, 10px 0 8px #e9e9e9, -6px 0 4px #e1e1e1, -10px 0 6px #e9e9e9;
+  }
+}

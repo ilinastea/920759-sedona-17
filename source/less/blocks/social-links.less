@@ -7,13 +7,31 @@
 }
 
 .social-links__item {
-  width: 46px;
-  height: 46px;
-  background-color: #81b3d2;
-}
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 46px;
+    height: 48px;
+    background-color: #81b3d2;
+  }
 
-.social-links__item:not(:last-child) {
-  margin-right: 6px;
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+
+  & a:hover,
+  & a:focus {
+    background-color: @blue-theme-hover;
+  }
+
+  &:active a {
+    background-color: @blue-theme-active;
+  }
+
+  &:active img {
+    opacity: 0.4;
+  }
 }
 
 //вресия для планшета
