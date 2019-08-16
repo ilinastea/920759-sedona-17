@@ -321,7 +321,9 @@
 .feedback-form__send {
   width: 280px;
   margin: 0 auto;
-  padding: 16px 40px;
+  padding: 16px 0;
+  text-align: center;
+  // padding: 16px 40px;
   border: 0;
   outline: none;
   font-family: "PT Sans", "Arial", sans-serif;
@@ -340,6 +342,10 @@
     color: #94b9d2;
     background-color: @blue-theme-active;
   }
+}
+
+.feedback-form__wrapper {
+  margin: 0 auto;
 }
 
 .feedback-form__required-fields {
@@ -481,16 +487,21 @@
     margin: 0 0 60px;
   }
 
+  .feedback-form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 648px;
+  }
+
   .feedback-form__send {
     width: 324px;
     margin: 0;
-    padding: 16px 65px;
+    // padding: 16px 65px;
   }
 
   .feedback-form__required-fields {
     display: block;
-    margin-left: auto;
-    vertical-align: middle;
     .font-content(26px);
   }
 }
@@ -596,12 +607,15 @@
     }
   }
 
+  .feedback-form__wrapper {
+    width: 960px;
+  }
+
   .feedback-form__text {
     width: 920px;
   }
 
   .feedback-form__send {
     width: 480px;
-    padding: 16px 148px;
   }
 }
