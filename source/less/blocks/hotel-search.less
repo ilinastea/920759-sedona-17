@@ -1,5 +1,5 @@
 .hotel-search {
-  margin: 28px auto 36px;
+  margin: 28px auto 52px;
 }
 
 .hotel-search__title {
@@ -23,10 +23,7 @@
   width: 280px;
   margin: 0 auto;
   padding: 14px 0;
-  border: 0;
-  outline: none;
   text-align: center;
-  font-family: "PT Sans", "Arial", sans-serif;
   text-transform: uppercase;
   .font-header(21px);
   .blue-theme;
@@ -56,10 +53,25 @@
 
   .hotel-search__text {
     width: 400px;
-    margin-bottom: 46px;
+    margin-bottom: 44px;
   }
 
   .hotel-search__action {
     width: 460px;
+  }
+}
+
+//версия для десктопаы
+@media (min-width: 1200px) {
+  .hotel-search {
+    margin-bottom: 68px;
+  }
+
+  .hotel-search__title {
+    margin-bottom: 28px;
+  }
+
+  .hotel-search__action {
+    padding: 16px 0;
   }
 }

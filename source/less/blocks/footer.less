@@ -29,8 +29,19 @@
   .font-content(26px);
 }
 
-.footer__about-developer img {
+.footer__about-developer svg {
   margin-left: 12px;
+}
+
+.footer__developer-link {
+  &:hover svg,
+  &:focus svg {
+    fill: #81b3d2;
+  }
+
+  &:active svg {
+    fill: #b2b2b2;
+  }
 }
 
 //версия для планшета
@@ -47,10 +58,6 @@
   .footer__about-developer {
     padding-right: 60px;
   }
-
-  .footer__developer-link img {
-    max-width: 27px;
-  }
 }
 
 //версия десктоп
@@ -66,10 +73,5 @@
 
   .footer__about-developer {
     padding-right: 120px;
-
-    & img {
-      width: 27px;
-      height: 34px;
-    }
   }
 }
