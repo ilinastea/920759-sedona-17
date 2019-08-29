@@ -1,5 +1,5 @@
 .videostream__title {
-  margin: 32px 0 30px;
+  margin: 32px 0 28px;
   padding: 0;
   text-align: center;
   .font-header(18px);
@@ -7,27 +7,147 @@
 
 .videostream__text {
   width: 270px;
-  margin: 0 auto 50px;
+  margin: 0 auto 34px;
   padding: 0;
   text-align: center;
   .font-content(24px);
 }
 
-//версия для планшета
-@media (min-width: 768px) {
-  .videostream {
-    width: @width-tablet;
-    margin: 0 auto;
+.videostream__player {
+  position: relative;
+}
+
+.videostream__player-video {
+  content: "";
+  position: absolute;
+  top: -45px;
+  left: 20px;
+  width: 280px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.videostream__player-video-scale {
+  content: "";
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 235px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.videostream__player-video-toggle {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 36px;
+  width: 9px;
+  height: 9px;
+  background-color: #ffffff;
+  border-radius: 50%;
+}
+
+.videostream__player-control {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 232px;
+  height: 66px;
+  margin: 0 auto 76px;
+  padding: 0 23px 0 25px;
+  background-color: #f2f2f2;
+}
+
+.videostream__player-btn {
+  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  background: none;
+}
+
+.videostream__player-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 83px;
+}
+
+.videostream__player-control svg,
+.videostream__player-wrapper svg {
+  fill: #5c6870;
+
+  &:hover,
+  &:focus {
+    fill: #333333;
   }
 
+  &:active {
+    fill: #b8b8b8;
+  }
+}
+
+//версия для планшета
+@media (min-width: 768px) {
   .videostream__title {
-    margin: 70px 0 30px;
+    margin: 70px 0 28px;
     .font-header(30px);
   }
 
   .videostream__text {
     width: 450px;
-    margin: 0 auto 64px;
+    margin: 0 auto 74px;
+  }
+
+  .videostream__wrapper {
+    position: relative;
+    width: 648px;
+    margin: 0 auto 74px;
+  }
+
+  .videostream__bg img {
+    width: 648px;
+    height: 500px;
+  }
+
+  .videostream__player-video {
+    background: none;
+    z-index: 1;
+  }
+
+  .videostream__player-video-scale {
+    width: 389px;
+    top: -2px;
+    left: 72px;
+  }
+
+  .videostream__player-video-toggle {
+    left: 114px;
+  }
+
+  .videostream__player-control {
+    position: absolute;
+    bottom: 0;
+    width: 572px;//648
+    height: 93px;
+    margin: 0;
+    padding: 0 41px 0 35px;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .videostream__player-control svg,
+  .videostream__player-wrapper svg {
+    fill: #ffffff;
+
+    &:hover,
+    &:focus {
+      fill: #c2c2c2;
+    }
+
+    &:active {
+      fill: #949494;
+    }
   }
 }
 
@@ -40,5 +160,22 @@
   .videostream__text {
     width: 450px;
     margin: 0 auto 72px;
+  }
+
+  .videostream__wrapper {
+    width: 800px;
+    margin: 0 auto 120px;
+  }
+
+  .videostream__bg img {
+    width: 800px;
+  }
+
+  .videostream__player-control {
+    width: 724px;
+  }
+
+  .videostream__player-video-scale {
+    width: 540px;
   }
 }

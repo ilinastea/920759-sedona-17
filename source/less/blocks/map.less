@@ -1,18 +1,18 @@
 .map {
   display: block;
+  margin: 0 auto 32px;
 }
 
 //вресия для планшета
 @media (min-width: 768px) {
-  .map {
+  .map iframe {
     width: @width-tablet;
   }
 }
 
 //версия десктоп
 @media (min-width: 1200px) {
-  .map {
+  .map iframe {
     width: @width-desktop;
-    padding: 0 40px;
   }
 }

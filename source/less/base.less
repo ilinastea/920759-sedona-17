@@ -2,14 +2,14 @@
   font-weight: normal;
   font-family: "PT Sans";
   font-style: normal;
-  src: url("fonts/ptsans.woff2") format("woff2"), url("fonts/ptsans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2"), url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
   font-weight: bold;
   font-family: "PT Sans";
   font-style: normal;
-  src: url("fonts/ptsansbold.woff2") format("woff2"), url("fonts/ptsansbold.woff") format("woff");
+  src: url("../fonts/ptsansbold.woff2") format("woff2"), url("../fonts/ptsansbold.woff") format("woff");
 }
 
 body {
@@ -43,4 +43,10 @@ img {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+@media (min-width: 1200px) {
+  body {
+    background-color: #f2f2f2;
+  }
 }

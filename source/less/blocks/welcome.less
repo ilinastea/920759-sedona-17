@@ -1,152 +1,135 @@
-.welcome__wrapper-index,
-.welcome__wrapper {
+.welcome__wrapper-index {
   position: relative;
-  overflow: hidden;
-}
-
-.welcome__wrapper {
-  height: 158px;
-  background-color: #81b3d2; //заглушка на случай незагружаемого фото
-}
-
-.welcome__bg-index img {
-  max-width: 768px;
   height: 389px;
-  margin: 0 -224px;
-  background-color: #81b3d2; //заглушка на случай незагружаемого фото
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat -224px;
+  background-color: #81b3d2; //заглушка
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 26px;
+    bottom: 0;
+    background: url("../img/bg-intro-triangle-mobile.svg") no-repeat;
+  }
 }
 
-.welcome__bg img {
-  max-width: 768px;
-  margin: -231px -224px 0;
+.welcome__text-index img {
+  margin: 0 auto;
+  padding-top: 90px;
 }
 
-.welcome__text-index {
-  position: absolute;
-  top: 90px;
-  left: 20px;
-}
-
-.welcome__text {
-  position: absolute;
-  top: 52px;
-  left: 45px;
-}
-
-.welcome__bg-triangle {
-  position: absolute;
-  bottom: 0;
-}
-
-.welcome__head {
-  margin: 0;
-  padding: 0;
-}
-
-.welcome__title {
+.welcome__title-index {
   width: 264px;
   margin: 40px auto 28px;
   text-align: center;
   .font-header(18px);
 }
 
-.welcome__intro {
+.welcome__intro-index {
   width: 264px;
-  margin: 0 auto 40px;
+  margin: 0 auto 23px;
   text-align: center;
   .font-content(26px);
 }
 
+.welcome__wrapper {
+  position: relative;
+  height: 158px;
+  background: url("../img/bg-back-mobile@1x.jpg") no-repeat -225px bottom;
+  background-color: #81b3d2; //заглушка
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 26px;
+    bottom: 0;
+    background: url("../img/bg-intro-triangle-mobile.svg") no-repeat;
+  }
+}
+
+.welcome__text img {
+  margin: 0 auto;
+  padding-top: 54px;
+}
+
 //версия для планшета
 @media (min-width: 768px) {
-  .welcome__wrapper {
-    height: 290px;
-  }
-
-  .welcome__bg-index img {
-    width: 768px;
-    max-width: 100%;
+  .welcome__wrapper-index {
     height: 518px;
-    margin: 0;
-  }
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat;
 
-  .welcome__bg img {
-    width: 768px;
-    max-width: 100%;
-    margin: -228px 0 0;
-  }
-
-  .welcome__text-index {
-    top: 76px;
-    left: 154px;
-
-    & img {
-      width: 460px;
-      height: 350px;
-    }
-  }
-
-  .welcome__text {
-    top: 95px;
-    left: 146px;
-
-    & img {
-      width: 476px;
-      height: 78px;
-    }
-  }
-
-  .welcome__bg-triangle {
-    bottom: -2px;
-
-    & img {
+    &::before {
       width: 768px;
-      height: 60px;
+      height: 57px;
+      background: url("../img/bg-intro-triangle-tablet.svg") no-repeat;
     }
   }
 
-  .welcome__title {
+  .welcome__text-index img {
+    width: 460px;
+    height: 350px;
+    padding-top: 77px;
+  }
+
+  .welcome__title-index {
     width: 445px;
     margin: 48px auto 28px;
     .font-header(21px);
   }
 
-  .welcome__intro {
+  .welcome__intro-index {
     width: 500px;
     margin: 0 auto 50px;
+  }
+
+  .welcome__wrapper {
+    height: 288px;
+    background: url("../img/bg-back-tablet@1x.jpg") no-repeat 0 bottom;
+
+    &::before {
+      width: 768px;
+      height: 57px;
+      background: url("../img/bg-intro-triangle-tablet.svg") no-repeat;
+    }
+  }
+
+  .welcome__text img {
+    width: 476px;
+    height: 78px;
+    padding-top: 95px;
   }
 }
 
 //версия десктоп
 @media (min-width: 1200px) {
+  .welcome__wrapper-index {
+    background: url("../img/bg-back-desktop@1x.jpg") no-repeat;
+
+    &::before {
+      width: 1200px;
+      background: url("../img/bg-intro-triangle-desktop.svg") no-repeat;
+    }
+  }
+
+  .welcome__title-index {
+    .font-header(21px);
+  }
+
   .welcome__wrapper {
     height: 299px;
+    background: url("../img/bg-back-desktop@1x.jpg") no-repeat 40px -161px;
+
+    &::before {
+      width: 1200px;
+      background: url("../img/bg-intro-triangle-desktop.svg") no-repeat;
+    }
   }
 
-  .welcome__bg-index img {
-    width: 1200px;
-  }
-
-  .welcome__bg img {
-    width: 1200px;
-    margin: -219px 0 0;
-  }
-
-  .welcome__text-index {
-    left: 370px;
-  }
-
-  .welcome__text {
-    top: 100px;
-    left: 364px;
-  }
-
-  .welcome__bg-triangle img {
-    width: 1200px;
-    height: 60px;
-  }
-
-  .welcome__title {
-    .font-header(21px);
+  .welcome__text img {
+    width: 461px;
+    height: 80px;
+    padding-top: 102px;
   }
 }

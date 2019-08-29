@@ -1,3 +1,12 @@
+.choice-reasons__wrapper {
+  position: relative;
+
+  &_bg-triangle {
+    position: absolute;
+    top: -17px;
+  }
+}
+
 .choice-reasons__content {
   display: flex;
   flex-direction: column;
@@ -11,6 +20,10 @@
   &_grey-theme {
     padding: 26px 0; //checked
     background: #eeeeee;
+  }
+
+  &_triangle {
+    padding: 57px 0 40px 0;
   }
 }
 
@@ -41,6 +54,10 @@
 @media (min-width: 768px) {
   .choice-reasons__wrapper {
     display: flex;
+
+    &_bg-triangle {
+      display: none;
+    }
   }
 
   .choice-reasons__content {
