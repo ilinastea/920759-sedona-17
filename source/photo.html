@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_min.css" rel="stylesheet">
   </head>
   <svg style="display: none">
     <symbol viewBox="0 0 22 20" id="icon-like">
@@ -35,6 +35,9 @@
     </symbol>
   </svg>
   <body>
+    <div style="display: none">
+      <include src="build/img/sprite.svg"></include>
+    </div>
     <div class="main-container">
       <div class="main-container__desktop-bg">
         <header class="header">
@@ -63,22 +66,8 @@
           <section class="welcome">
             <h1 class="hidden">Sedona</h1>
             <div class="welcome__wrapper">
-              <a class="welcome__bg">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/bg-back-desktop@1x.jpg, img/bg-back-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/bg-back-tablet@1x.jpg, img/bg-back-tablet@2x.jpg 2x">
-                  <img src="img/bg-back-mobile@1x.jpg" width="768" height="389" srcset="img/bg-back-mobile@2x.jpg 2x" alt="">
-                </picture>
-              </a>
               <a class="welcome__text">
-                  <img src="img/text-sedona.svg" width="229" height="39" alt="">
-              </a>
-              <a class="welcome__bg-triangle">
-                <picture>
-                  <source media="(min-width: 1200px)" srcset="img/bg-intro-triangle-desktop.svg">
-                  <source media="(min-width: 768px)" srcset="img/bg-intro-triangle-tablet.svg">
-                  <img src="img/bg-intro-triangle-mobile.svg" width="320" height="27" alt="">
-                </picture>
+                <img src="img/text-sedona.svg" width="229" height="39" alt="">
               </a>
             </div>
           </section>
@@ -196,27 +185,30 @@
                 </picture>
               </a>
               <div class="videostream__player">
-                <div class="videostream__player-volume">
-                  <div class="videostream__player-volume-scale">
-                    <div class="videostream__player-volume-toggle">
+                <div class="videostream__player-video">
+                  <div class="videostream__player-video-scale">
+                    <div class="videostream__player-video-toggle">
                     </div>
                   </div>
                 </div>
                 <div class="videostream__player-control">
                   <button class="videostream__player-btn" type="button">
+                    <span class="hidden">Replay video</span>
                     <svg width="16" height="20">
                       <use xlink:href="#icon-video-replay"></use>
                     </svg>
                   </button>
                   <div class="videostream__player-wrapper">
                     <button class="videostream__player-btn" type="button">
+                      <span class="hidden">Subtitles</span>
                       <svg width="32" height="20">
-                        <use xlink:href="#icon-video-subs"></use>
+                        <use xlink:href="#icon-video-subtitles"></use>
                       </svg>
                     </button>
-                      <button class="videostream__player-btn" type="button">
+                    <button class="videostream__player-btn" type="button">
+                      <span class="hidden">Fullscrean</span>
                       <svg width="20" height="20">
-                        <use xlink:href="#icon-video-fullscr"></use>
+                        <use xlink:href="#icon-video-fullscreen"></use>
                       </svg>
                     </button>
                   </div>
@@ -230,17 +222,20 @@
           <ul class="footer__social social-links">
             <li class="social-links__item">
               <a href="#" target="_blank">
-                <img src="img/icon-twitter.svg" width="18" height="14" alt="Twitter">
+                <span class="hidden">Twitter</span>
+                <img src="img/icon-twitter.svg" width="18" height="14" alt="">
               </a>
             </li>
             <li class="social-links__item">
               <a href="#" target="_blank">
-                <img src="img/icon-facebook.svg" width="9" height="18" alt="Facebook">
+                <span class="hidden">Facebook</span>
+                <img src="img/icon-facebook.svg" width="9" height="18" alt="">
               </a>
             </li>
             <li class="social-links__item">
               <a href="#" target="_blank">
-                <img src="img/icon-youtube.svg" width="20" height="14" alt="Youtube">
+                <span class="hidden">Youtube</span>
+                <img src="img/icon-youtube.svg" width="20" height="14" alt="">
               </a>
             </li>
           </ul>
