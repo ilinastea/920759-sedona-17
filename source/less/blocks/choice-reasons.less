@@ -1,29 +1,40 @@
-.choice-reasons__wrapper {
-  position: relative;
-
-  &_bg-triangle {
-    position: absolute;
-    top: -17px;
-  }
-}
-
 .choice-reasons__content {
   display: flex;
   flex-direction: column;
   align-items: center;
 
   &_blue-theme {
-    padding: 40px 0; //checked
+    padding: 40px 0;
     .blue-theme;
   }
 
   &_grey-theme {
-    padding: 26px 0; //checked
+    position: relative;
+    padding: 26px 0;
     background: #eeeeee;
   }
 
+  &_grey-theme:not(:first-child)::after {
+    content: "";
+    top: 0;
+    position: absolute;
+    width: 280px;
+    height: 1px;
+    background-color: #d6d6d6;
+  }
+
   &_triangle {
+    position: relative;
     padding: 57px 0 40px 0;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -20px;
+      width: 320px;
+      height: 50px;
+      background: url("../img/bg-triangle.svg") no-repeat;
+    }
   }
 }
 
@@ -43,21 +54,26 @@
 }
 
 .choice-reasons__number {
-  margin-bottom: 16px; //checked
+  margin-bottom: 16px;
+
+  &_grey {
+    color: #333333;
+  }
 }
 
 .choice-reasons__text {
   width: 270px;
+
+  &_grey {
+    color: #333333;
+  }
 }
 
 //версия для планшета
 @media (min-width: 768px) {
   .choice-reasons__wrapper {
     display: flex;
-
-    &_bg-triangle {
-      display: none;
-    }
+    flex-wrap: wrap;
   }
 
   .choice-reasons__content {
@@ -70,11 +86,19 @@
     }
 
     &_grey-theme {
-      padding: 44px 0 38px;
+      padding: 44px 0;
+    }
+
+    &_grey-theme:not(:first-child)::after {
+      display: none;
     }
 
     &_order {
       order: 1;
+    }
+
+    &_triangle::before {
+      display: none;
     }
   }
 
@@ -92,7 +116,7 @@
     width: 170px;
   }
 
-  .choice-reasons__photo img {
+  .choice-reasons__photo {
     width: 512px;
   }
 }
@@ -107,12 +131,16 @@
     }
 
     &_grey-theme {
-      padding: 46px 0 60px;
+      padding: 46px 0 62px;
     }
   }
 
   .choice-reasons__text {
-    width: 270px;
+    width: 290px;
+
+    &_width {
+      width: 220px;
+    }
   }
 
   .choice-reasons__wrapper-photo {

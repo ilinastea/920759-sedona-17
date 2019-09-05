@@ -38,9 +38,7 @@
           <section class="welcome">
             <h1 class="hidden">Sedona</h1>
             <div class="welcome__wrapper">
-              <a class="welcome__text">
-                <img src="img/text-sedona.svg" width="229" height="39" alt="">
-              </a>
+              <img class="welcome__text" src="img/text-sedona.svg" width="229" height="39" alt="">
             </div>
           </section>
           <section class="get-feedback">
@@ -70,22 +68,19 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="feedback-form__set">
+              <fieldset class="feedback-form__set feedback-form__set_contact">
                 <legend class="feedback-form__title feedback-form__title_contact">Контактная информация:</legend>
                 <ul class="feedback-form__list feedback-form__list_contact">
                   <li class="feedback-form__contact-field">
-                    <label class="feedback-form__contact-field_label-full" for="phone">Контактный телефон*:</label>
-                    <label class="feedback-form__contact-field_label-short" for="phone">Телефон*:</label>
-                    <div class="feedback-form__contact-wrapper">
+                    <label class="feedback-form__contact-field" for="phone"><span>Контактный </span>телефон*:</label>
+                    <div class="feedback-form__phone-wrapper">
                       <input class="feedback-form__contact-input" type="tel" name="phone" id="phone" placeholder="Введите телефон" required="">
-                      <button class="feedback-form__phone-btn" type="button"></button>
                     </div>
                   </li>
                   <li class="feedback-form__contact-field">
                     <label for="email">Электронная почта*:</label>
-                    <div class="feedback-form__contact-wrapper">
+                    <div class="feedback-form__email-wrapper">
                       <input class="feedback-form__contact-input" type="email" name="email" id="email" placeholder="Введите e-mail" required="">
-                      <button class="feedback-form__email-btn" type="button"></button>
                     </div>
                   </li>
                 </ul>
@@ -107,7 +102,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="feedback-form__set">
+              <fieldset class="feedback-form__set feedback-form__set_showplaces">
                 <legend class="feedback-form__title feedback-form__title_showplaces">Посещенные достопримечательности:</legend>
                 <ul class="feedback-form__list feedback-form__list_showplace">
                   <li class="feedback-form__showplace">
@@ -128,7 +123,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="feedback-form__set">
+              <fieldset class="feedback-form__set feedback-form__set_feedback">
                 <legend class="feedback-form__title feedback-form__title_feedback">Опишите свои эмоции:</legend>
                 <textarea class="feedback-form__text" name="feedback" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
               </fieldset>
@@ -157,19 +152,25 @@
             <li class="social-links__item">
               <a href="#" target="_blank">
                 <span class="hidden">Twitter</span>
-                <img src="img/icon-twitter.svg" width="18" height="14" alt="">
+                <svg width="18" height="14">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg>
               </a>
             </li>
             <li class="social-links__item">
               <a href="#" target="_blank">
                 <span class="hidden">Facebook</span>
-                <img src="img/icon-facebook.svg" width="9" height="18" alt="">
+                <svg width="9" height="18">
+                  <use xlink:href="#icon-facebook"></use>
+                </svg>
               </a>
             </li>
             <li class="social-links__item">
               <a href="#" target="_blank">
                 <span class="hidden">Youtube</span>
-                <img src="img/icon-youtube.svg" width="20" height="14" alt="">
+                <svg width="20" height="14">
+                  <use xlink:href="#icon-youtube"></use>
+                </svg>
               </a>
             </li>
           </ul>

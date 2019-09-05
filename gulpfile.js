@@ -49,7 +49,7 @@ gulp.task("images", function() {
     imagemin.jpegtran({progressive: true})
     // imagemin.svgo()
   ]))
-  .pipe(gulp.dest("source/img/"))
+  .pipe(gulp.dest("build/img/"))
 });
 
 gulp.task("sprite", function() {
@@ -92,4 +92,4 @@ gulp.task("build", gulp.series(
   "sprite",
   "html"
 ));
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("start", gulp.series("css", "server"));

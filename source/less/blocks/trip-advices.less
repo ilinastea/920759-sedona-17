@@ -1,26 +1,61 @@
 .trip-advices {
-  margin: 0 0 32px;
-}
-
-.trip-advices__wrapper {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
+  flex-direction: column;
+  margin: 32px 0 34px 0;
 }
 
 .trip-advices__content {
+  display: flex;
+  flex-direction: column;
   width: 250px;
-  margin: 32px 0 0;
-}
+  margin-left: 70px;
 
-.trip-advices__icon img {
-  margin: 22px 14px;
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 28px;
+  }
 }
 
 .trip-advices__title {
+  position: relative;
   margin: 0 0 14px;
-  padding: 0;
   .font-header(18px);
+
+  &_house::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -49px;
+    width: 39px;
+    height: 37px;
+    background: url("../img/icon-house.svg") no-repeat;
+    background-size: 39px 37px;
+  }
+
+  &_gift::before {
+    content: "";
+    position: absolute;
+    top: -12px;
+    left: -45px;
+    width: 32px;
+    height: 38px;
+    background: url("../img/icon-gift.svg") no-repeat;
+    background-size: 32px 38px;
+  }
+
+  &_burger::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: -51px;
+    width: 40px;
+    height: 35px;
+    background: url("../img/icon-burger.svg") no-repeat;
+    background-size: 40px 35px;
+  }
 }
 
 .trip-advices__text {
@@ -28,47 +63,32 @@
   margin: 0;
   padding: 0;
   .font-content(21px);
+  color: #333333;
 }
 
 //версия для планшета
 @media (min-width: 768px) {
   .trip-advices {
-    display: flex;
-    margin: 62px auto 60px;
-  }
-
-  .trip-advices__wrapper {
-    flex-direction: column;
-    align-items: center;
-
-    &_order {
-      order: 1;
-    }
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto 60px;
+    padding-top: 160px;
   }
 
   .trip-advices__content {
     width: 256px;
     margin: 0;
-  }
 
-  .trip-advices__icon {
-    &_house img {
-      width: 75px;
-      height: 72px;
+    &_order {
+      order: 1;
     }
 
-    &_gift img {
-      width: 64px;
-      height: 75px;
+    &:not(:last-child) {
+      margin: 0;
     }
 
-    &_burger img {
-      width: 77px;
-      height: 68px;
-    }
-
-    & img {
-      margin: 0 0 26px;
+    &:nth-child(2) {
+      margin: 0;
     }
   }
 
@@ -76,10 +96,34 @@
     margin: 0 0 22px;
     text-align: center;
     .font-header(21px);
+
+    &_house::before {
+      top: -98px;
+      left: 90px;
+      width: 75px;
+      height: 72px;
+      background-size: 75px 72px;
+    }
+
+    &_gift::before {
+      top: -102px;
+      left: 96px;
+      width: 64px;
+      height: 75px;
+      background-size: 64px 75px;
+    }
+
+    &_burger::before {
+      top: -96px;
+      left: 90px;
+      width: 77px;
+      height: 68px;
+      background-size: 77px 68px;
+    }
   }
 
   .trip-advices__text {
-    width: 170px;
+    width: 164px;
     margin: 0 auto;
     text-align: center;
   }
@@ -91,8 +135,18 @@
     margin-bottom: 80px;
   }
 
-  .trip-advices__wrapper {
-    width: 400px;
+  .trip-advices__title {
+    &_house::before {
+      left: 160px;
+    }
+
+    &_gift::before {
+      left: 166px;
+    }
+
+    &_burger::before {
+      left: 160px;
+    }
   }
 
   .trip-advices__content {
@@ -102,5 +156,9 @@
   .trip-advices__text {
     width: 284px;
     margin: 0 auto;
+
+    &_width {
+      width: 220px;
+    }
   }
 }
